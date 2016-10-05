@@ -218,7 +218,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 10
 bindsym $mod+u exec ~/.config/i3/keyboard/toggle-xkbmap
 
 # lock screen Mod1=Alt
-bindsym Ctrl+Mod1+l exec i3lock
+bindsym Ctrl+Mod1+l exec i3lock -i ~/.config/i3/image/lock.png
 
 # move workspace
 bindsym $mod+x move workspace to output right
