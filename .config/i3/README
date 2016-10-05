@@ -1,0 +1,5 @@
+1. install i3
+2. run i3_postinstall.sh
+3. install applets
+4. move these files in ~/.config/i3/
+5. restart i3
