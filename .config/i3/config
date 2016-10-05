@@ -182,6 +182,9 @@ bar {
 # https://www.youtube.com/watch?v=j1I63wGcvU4
 # https://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
 
+# sudo apt-get install thunar
+# sudo apt-get install i3blocks
+
 
 ####### Startup Scripts
 exec_always --no-startup-id unity-settings-damenon
@@ -197,6 +200,11 @@ assign [class="Gnome-terminal"] $w3
 assign [class="Thunar"] $w5
 
 ####### KeyBindings
+# take screenshot- rectangular
+bindsym --release $mod+p exec --no-startup-id import ~/Pictures/screenshot-`/bin/date +%Y%m%d-%H:%M:%S`.png
+# take screenshot- entire screen
+bindsym --release $mod+End exec --no-startup-id import -window root ~/Pictures/screenshot-`/bin/date +%Y%m%d-%H:%M:%S`.png
+
 # volume control
 bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '-5%'
 bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '+5%'
@@ -206,10 +214,10 @@ bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 5
 bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 10
 
-# switch keybinding
+# switch keybing
 bindsym $mod+u exec ~/.config/i3/keyboard/toggle-xkbmap
 
-# lock screen
+# lock screen Mod1=Alt
 bindsym Ctrl+Mod1+l exec i3lock
 
 # move workspace
