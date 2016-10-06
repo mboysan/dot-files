@@ -196,6 +196,7 @@ exec_always --no-startup-id mate-power-manager
 # use xprop
 assign [class="google-chrome"] $w4
 assign [class="Firefox"] $w4
+assign [class="Opera"] $w4
 assign [class="Gnome-terminal"] $w3
 assign [class="Thunar"] $w5
 
