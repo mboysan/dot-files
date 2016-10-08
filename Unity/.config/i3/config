@@ -101,11 +101,11 @@ set $w2 "2: Devel2"
 set $w3 "3: Terminals"
 set $w4 "4: Browsers"
 set $w5 "5: Files"
-set $w6 "6"
-set $w7 "7"
-set $w8 "8"
-set $w9 "9"
-set $w0 "0"
+set $w6 "6: Workspace"
+set $w7 "7: Workspace"
+set $w8 "8: Workspace"
+set $w9 "9: Workspace"
+set $w0 "0: Workspace"
 
 # switch to workspace
 bindsym $mod+1 workspace $w1
@@ -187,6 +187,7 @@ bar {
 
 
 ####### Startup Scripts
+#exec_always --no-startup-id unity-settings-damenon
 exec_always --no-startup-id ~/.config/i3/scripts/startup.sh
 exec_always --no-startup-id mate-volume-control-applet
 exec_always --no-startup-id nm-applet
@@ -199,6 +200,7 @@ assign [class="Firefox"] $w4
 assign [class="Opera"] $w4
 assign [class="Gnome-terminal"] $w3
 assign [class="Thunar"] $w5
+assign [class="Pcmanfm"] $w5
 
 ####### KeyBindings
 # take screenshot- rectangular
@@ -223,3 +225,7 @@ bindsym Ctrl+Mod1+l exec i3lock -i ~/.config/i3/image/lock.png
 
 # move workspace
 bindsym $mod+x move workspace to output right
+
+# cycle through windows
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
