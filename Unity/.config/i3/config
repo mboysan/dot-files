@@ -201,6 +201,7 @@ assign [class="Opera"] $w4
 assign [class="Gnome-terminal"] $w3
 assign [class="Thunar"] $w5
 assign [class="Pcmanfm"] $w5
+assign [class="Caja"] $w5
 
 ####### KeyBindings
 # take screenshot- rectangular
